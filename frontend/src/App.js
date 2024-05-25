@@ -1,8 +1,9 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import React from "react";
-import StudentForm from './Pages/StudentForm';
+
 import AdminLoginForm from './Pages/AdminLoginForm';
-import ComapanyDetailsForm from './Pages/CompanyDetailsForm';
+import McqPage from './Pages/McqPage';
+import Signuppage from './Pages/Signuppage';
 
 function App() {
   return (
@@ -10,9 +11,9 @@ function App() {
       <div>
         <BrowserRouter>
         <Routes>
-          <Route path='/studentform' element={<StudentForm/>}/>
           <Route path='/adminform' element={<AdminLoginForm/>}/>
-          <Route path='/companyform' element={<ComapanyDetailsForm/>}/>
+          <Route path='/signup' element={<Signuppage/>}/>
+          <Route path='/mcqpage' element={<McqPage/>}/>
         </Routes>
         </BrowserRouter>
       </div>

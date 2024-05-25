@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUser, faEnvelope, faLock } from '@fortawesome/free-solid-svg-icons';
-import '../CSS/AdminLoginForm.css';
+import '../CSS/Signup.css';
 
-const AdminLoginForm = () => {
+const Signuppage = () => {
   const [isSignUpMode, setIsSignUpMode] = useState(false);
 
   const handleSignUpClick = () => {
@@ -19,7 +19,7 @@ const AdminLoginForm = () => {
       <div className="forms-container">
         <div className="signin-signup">
           <form action="#" className={`sign-in-form ${isSignUpMode ? 'hidden' : ''}`}>
-            <h2 className="title">Sign in(Admin)</h2>
+            <h2 className="title">Sign in</h2>
             <div className="input-field">
               <FontAwesomeIcon icon={faUser} className="icon" />
               <input type="text" placeholder="Username" />
@@ -31,40 +31,32 @@ const AdminLoginForm = () => {
             <input type="submit" value="Login" className="btn solid" />
           </form>
           <form action="#" className={`sign-up-form ${isSignUpMode ? '' : 'hidden'}`}>
-            <h2 className="title">Company details</h2>
+            <h2 className="title">Sign up</h2>
             <div className="input-field">
               <FontAwesomeIcon icon={faUser} className="icon" />
-              <input type="text" placeholder="Company Name" />
+              <input type="text" placeholder="Username" />
             </div>
             <div className="input-field">
               <FontAwesomeIcon icon={faUser} className="icon" />
-              <input type="text" placeholder="Designation" />
+              <input type="text" placeholder="USN" />
             </div>
             <div className="input-field">
               <FontAwesomeIcon icon={faUser} className="icon" />
-              <input type="text" placeholder="Package" />
+              <input type="text" placeholder="Phone Number" />
             </div>
             <div className="input-field">
               <FontAwesomeIcon icon={faEnvelope} className="icon" />
-              <input type="text" placeholder="Location" />
+              <input type="email" placeholder="Email" />
             </div>
             <div className="input-field">
               <FontAwesomeIcon icon={faLock} className="icon" />
-              <input type="date" placeholder="Apply before" />
+              <input type="password" placeholder="Password" />
             </div>
             <div className="input-field">
               <FontAwesomeIcon icon={faLock} className="icon" />
-              <input type="text" placeholder="Stream" />
+              <input type="password" placeholder="Confirm Password" />
             </div>
-            <div className="input-field">
-              <FontAwesomeIcon icon={faLock} className="icon" />
-              <input type="text" placeholder="Max Backlogs" />
-            </div>
-            <div className="input-field">
-              <FontAwesomeIcon icon={faLock} className="icon" />
-              <textarea type="text" placeholder="Description" rows="3" cols="50" />
-            </div>
-            <input type="submit" className="btn" value="Submit" />
+            <input type="submit" className="btn" value="Sign up" />
           </form>
         </div>
       </div>
@@ -78,11 +70,11 @@ const AdminLoginForm = () => {
             <p></p>
             <p></p>
             <h2>
-              Want to add company details?
+              New one ?
             </h2>
             <p></p>
             <button className="btn transparent" onClick={handleSignUpClick}>
-              Add
+              Sign up
             </button>
           </div>
         </div>
@@ -108,4 +100,4 @@ const AdminLoginForm = () => {
   );
 };
 
-export default AdminLoginForm;
+export default Signuppage;
